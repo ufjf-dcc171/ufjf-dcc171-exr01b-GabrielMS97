@@ -9,13 +9,25 @@ public class Aula01Exr01b {
             double x1, x2, y1, y2;
             String s1, s2, s3, s4;
             s1 = JOptionPane.showInputDialog("Informe o valor X do ponto 1: ");
+            if (s1 == null) {
+                JOptionPane.showMessageDialog(null, "Você deveria ter digitado um valor!", "ERRO!", JOptionPane.ERROR_MESSAGE);
+            }
             s2 = JOptionPane.showInputDialog("Informe o valor Y do ponto 1: ");
+            if (s2 == null) {
+                JOptionPane.showMessageDialog(null, "Você deveria ter digitado um valor!", "ERRO!", JOptionPane.ERROR_MESSAGE);
+            }
 
             x1 = Float.parseFloat(s1);
             y1 = Float.parseFloat(s2);
 
             s3 = JOptionPane.showInputDialog("Informe o valor X do ponto 2: ");
+            if (s3 == null) {
+                JOptionPane.showMessageDialog(null, "Você deveria ter digitado um valor!", "ERRO!", JOptionPane.ERROR_MESSAGE);
+            }
             s4 = JOptionPane.showInputDialog("Informe o valor Y do ponto 2: ");
+            if (s4 == null) {
+                JOptionPane.showMessageDialog(null, "Você deveria ter digitado um valor!", "ERRO!", JOptionPane.ERROR_MESSAGE);
+            }
 
             x2 = Float.parseFloat(s3);
             y2 = Float.parseFloat(s4);
@@ -24,9 +36,7 @@ public class Aula01Exr01b {
 
             JOptionPane.showMessageDialog(null, "A distância entre os pontos (" + x1 + "," + y1 + ") e (" + x2 + "," + y2 + ") é de " + d + " cm.",
                     "Resultado", JOptionPane.INFORMATION_MESSAGE);
-        }
-        catch(NumberFormatException ex)
-        {
+        } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Informe apenas valores numéricos! ", "ERRO!", JOptionPane.ERROR_MESSAGE);
         }
     }
